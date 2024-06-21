@@ -1,9 +1,16 @@
 <app-header></app-header>
 <main class='user-block'>
   <ul id='users'>
-    <li *ngFor='let user of users'>
-      <app-user [user]='user'></app-user>
+    <li *ngFor='let user of users' >
+      <app-user [user]='user' (select)='onFoo($event)'></app-user>
     </li>
   </ul>
+  <div *ngIf='selectedUser; else infoBlock'>
+    <h3>{{userInfo?.name}}</h3>
+  </div>
 </main>
+<ng-template #infoBlock>
+  <h3>Select user</h3>
+</ng-template>
+
 

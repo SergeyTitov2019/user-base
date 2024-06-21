@@ -18,9 +18,8 @@ export class AppComponent {
     this.userInfo = event
   }
 
-  // get selectedUser(){
-  // return this.users.find((user) => user.id === this.selectedUserid)!
-  // }
-  // users: any;
+  get selectedUser(): User | null{
+    return this.users.find((user: User) => user.id === this.selectedUserid)!
+  }
 
 }
