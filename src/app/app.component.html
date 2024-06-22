@@ -6,9 +6,11 @@
     </li>
   </ul>
   <div *ngIf='selectedUser; else infoBlock'>
-    <h3>{{userInfo?.name}}</h3>
+<!--    <h3>{{userInfo?.name}}</h3>-->
+    <app-tasks [data]='userInfo?.name' ></app-tasks>
   </div>
 </main>
+
 <ng-template #infoBlock>
   <h3>Select user</h3>
 </ng-template>
