@@ -10,16 +10,16 @@ import { User } from '../shared/types/user'
 
 export class AppComponent {
   users: any = DUMMY_USERS
-  userInfo: User | null = null
-  selectedUserid: string | undefined
+  selectedUserId: string | undefined
+  selected: boolean = false
 
-  onFoo(event: User) {
-    this.selectedUserid = event.id
-    this.userInfo = event
+  onSelectUser(event: User) {
+    this.selectedUserId = event.id
+    this.selected = true
   }
 
   get selectedUser(): User | null{
-    return this.users.find((user: User) => user.id === this.selectedUserid)!
+    return this.users.find((user: User) => user.id === this.selectedUserId)!
   }
 
 }

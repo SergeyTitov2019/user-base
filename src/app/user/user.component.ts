@@ -9,9 +9,10 @@ import { User } from '../../shared/types/user'
 
 export class UserComponent {
   @Input({ required: true }) user!: User
+  @Input() selected: boolean = false
   @Output() select = new EventEmitter<User>()
-  
-  onClick() {
+
+  onSelectUSer() {
     this.select.emit(this.user)
   }
 }

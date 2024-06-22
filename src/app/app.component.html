@@ -2,12 +2,11 @@
 <main class='user-block'>
   <ul id='users'>
     <li *ngFor='let user of users' >
-      <app-user [user]='user' (select)='onFoo($event)'></app-user>
+      <app-user [user]='user' (select)='onSelectUser($event)' [selected]='user.id === selectedUserId' ></app-user>
     </li>
   </ul>
   <div *ngIf='selectedUser; else infoBlock'>
-<!--    <h3>{{userInfo?.name}}</h3>-->
-    <app-tasks [data]='userInfo?.name' ></app-tasks>
+    <app-tasks [data]='selectedUser.name' ></app-tasks>
   </div>
 </main>
 

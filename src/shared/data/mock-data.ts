@@ -1,4 +1,5 @@
 import { User } from '../types/user'
+import { Task } from '../types/task'
 
 export const DUMMY_USERS: User[] = [
   {
@@ -32,3 +33,34 @@ export const DUMMY_USERS: User[] = [
     avatar: 'https://i.cbc.ca/1.6435183.1651203321!/fileImage/httpImage/image.jpg_gen/derivatives/square_140/avneet-dhillon.jpg',
   },
 ];
+
+export const TASKS: Task[] = [
+  {
+    id: 't1',
+    userId: 'u1',
+    title: 'Master Angular',
+    summary: 'Основатели Solana — экс-сотрудник Qualcomm Анатолий Яковенко, бывший разработчик BREW Грег Фицжеральд и доктор наук в области физики частиц Эрик Уильямс. ',
+    dueDate: '2025-12-02'
+  },
+  {
+    id: 't2',
+    userId: 'u2',
+    title: 'Master Angular',
+    summary: 'Основатели Solana — экс-сотрудник Qualcomm Анатолий Яковенко, бывший разработчик BREW Грег Фицжеральд и доктор наук в области физики частиц Эрик Уильямс. ',
+    dueDate: '2025-12-02'
+  },
+  {
+    id: 't3',
+    userId: 'u3',
+    title: 'Master Angular',
+    summary: 'Основатели Solana — экс-сотрудник Qualcomm Анатолий Яковенко, бывший разработчик BREW Грег Фицжеральд и доктор наук в области физики частиц Эрик Уильямс. ',
+    dueDate: '2025-12-02'
+  },
+  {
+    id: 't1',
+    userId: 'u1',
+    title: 'Master Angular',
+    summary: 'Основатели Solana — экс-сотрудник Qualcomm Анатолий Яковенко, бывший разработчик BREW Грег Фицжеральд и доктор наук в области физики частиц Эрик Уильямс. ',
+    dueDate: '2025-12-02'
+  },
+]
