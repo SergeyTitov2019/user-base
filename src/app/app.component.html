@@ -2,16 +2,19 @@
 <main class='user-block'>
   <ul id='users'>
     <li *ngFor='let user of users' >
-      <app-user [user]='user' (select)='onSelectUser($event)' [selected]='user.id === selectedUserId' ></app-user>
+      <app-user [user]='user'
+                (select)='onSelectUser($event)'
+                [selected]='user.id === selectedUserId'
+      ></app-user>
     </li>
   </ul>
   <div *ngIf='selectedUser; else infoBlock'>
-    <app-tasks [data]='selectedUser.name' ></app-tasks>
+    <app-tasks [name]='selectedUser.name' [userId]='selectedUser.id'></app-tasks>
   </div>
 </main>
 
 <ng-template #infoBlock>
-  <h3>Select user</h3>
+  <h3>Select a user</h3>
 </ng-template>
 
 

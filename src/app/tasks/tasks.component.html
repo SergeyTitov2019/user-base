@@ -1,8 +1,10 @@
-<menu>
-  <h3>{{ data }}'s Task</h3>
-  <button>Add Task</button>
-  <div>
-    <app-task [task]='data'></app-task>
+<menu id='tasks'>
+  <header class='header'>
+    <h3>{{ name }}'s Task</h3>
+    <button>Add Task</button>
+  </header>
+  <div *ngFor='let task of tasks'>
+    <app-task [task]='task'></app-task>
   </div>
 </menu>
 
