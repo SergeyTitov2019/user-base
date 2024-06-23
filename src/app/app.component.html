@@ -9,7 +9,9 @@
     </li>
   </ul>
   <div *ngIf='selectedUser; else infoBlock'>
-    <app-tasks [name]='selectedUser.name' [userId]='selectedUser.id'></app-tasks>
+    <app-tasks [name]='selectedUser.name'
+               [userId]='selectedUser.id'
+    ></app-tasks>
   </div>
 </main>
 

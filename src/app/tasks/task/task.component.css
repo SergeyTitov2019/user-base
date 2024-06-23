@@ -1,7 +1,10 @@
 article {
   padding: 1rem;
+  margin-bottom: 0.5rem;
   color: #25113d;
   background-color: #bf9ee5;
+  border: 1px solid #25113d;
+  border-radius: 5px;
 }
 
 h2 {

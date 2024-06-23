@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core'
 import { Task } from '../../shared/types/task'
-import { TASKS } from '../../shared/data/mock-data'
+import { DUMMY_TASKS } from '../../shared/data/mock-data'
 
 @Component({
   selector: 'app-tasks',
@@ -8,17 +8,15 @@ import { TASKS } from '../../shared/data/mock-data'
   styleUrl: './tasks.component.css'
 })
 export class TasksComponent {
-  @Input() data: any
-  @Input() userId: string = ''
-  @Input() name: string = ''
-  tasks: Task[] = TASKS
+  @Input({ required: true }) userId!: string
+  @Input({ required: true }) name!: string
+  tasks: Task[] = DUMMY_TASKS
 
-  get selectedUserTask(){
-    console.log(this.tasks.filter((task) => task.userId === this.userId))
+  get selectedUserTask(): Task[]{
     return this.tasks.filter((task) => task.userId === this.userId)
   }
 
-  onCompleteTask(id: string){
-    return this.tasks.filter((task) => task.id !== id)
+  onCompleteTask(id: string): void{
+    this.tasks = this.tasks.filter((task) => task.id !== id)
   }
 }

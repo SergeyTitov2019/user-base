@@ -1,10 +1,13 @@
 <menu id='tasks'>
   <header class='header'>
-    <h3>{{ name }}'s Task</h3>
+    <h2>{{ name }}'s Task</h2>
     <button>Add Task</button>
   </header>
-  <div *ngFor='let task of tasks'>
-    <app-task [task]='task'></app-task>
+
+  <div *ngFor='let task of selectedUserTask'>
+    <app-task [task]='task'
+              (complete)='onCompleteTask($event)'
+    ></app-task>
   </div>
 </menu>
 
