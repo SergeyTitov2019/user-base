@@ -1,9 +1,11 @@
 <menu id='tasks'>
   <header class='header'>
     <h2>{{ name }}'s Task</h2>
-    <button>Add Task</button>
+    <button (click)='onAddingTask()'>{{isAddingTask ? 'Save Task' : 'Add Task'}}</button>
   </header>
-
+  <div *ngIf='isAddingTask'>
+    <app-new-task (cancel)='onCancelAddingTask()'></app-new-task>
+  </div>
   <div *ngFor='let task of selectedUserTask'>
     <app-task [task]='task'
               (complete)='onCompleteTask($event)'

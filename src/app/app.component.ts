@@ -21,5 +21,4 @@ export class AppComponent {
   get selectedUser(): User | null{
     return this.users.find((user: User) => user.id === this.selectedUserId)!
   }
-
 }

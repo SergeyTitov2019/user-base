@@ -11,6 +11,7 @@ export class TasksComponent {
   @Input({ required: true }) userId!: string
   @Input({ required: true }) name!: string
   tasks: Task[] = DUMMY_TASKS
+  isAddingTask = false
 
   get selectedUserTask(): Task[]{
     return this.tasks.filter((task) => task.userId === this.userId)
@@ -18,5 +19,13 @@ export class TasksComponent {
 
   onCompleteTask(id: string): void{
     this.tasks = this.tasks.filter((task) => task.id !== id)
+  }
+
+  onAddingTask(){
+    this.isAddingTask = !this.isAddingTask
+  }
+
+  onCancelAddingTask():void {
+    this.isAddingTask = false
   }
 }
