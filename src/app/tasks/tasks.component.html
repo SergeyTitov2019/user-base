@@ -4,7 +4,9 @@
     <button (click)='onAddingTask()'>Add Task </button>
   </header>
   <div *ngIf='isAddingTask'>
-    <app-new-task (cancel)='onCancelAddingTask()' (add)='onAddNewTask($event)'></app-new-task>
+    <app-new-task (close)='onCancelAddingTask()'
+                  [userid]='userId'
+    ></app-new-task>
   </div>
   <div *ngFor='let task of selectedUserTask'>
     <app-task [task]='task'
@@ -12,11 +14,4 @@
     ></app-task>
   </div>
 </menu>
-
-
-
-
-
-
-
 
