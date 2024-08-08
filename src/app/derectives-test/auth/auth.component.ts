@@ -7,8 +7,6 @@ import { AuthService } from './auth.service'
   styleUrl: './auth.component.css'
 })
 export class AuthComponent {
-
-
   email = signal('');
   password = signal('');
   private authService = inject(AuthService);
