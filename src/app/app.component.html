@@ -1,22 +1,3 @@
 <app-header></app-header>
-<main class='user-block'>
-  <ul id='users'>
-    <li *ngFor='let user of users' >
-      <app-user [user]='user'
-                (select)='onSelectUser($event)'
-                [selected]='user.id === selectedUserId'
-      ></app-user>
-    </li>
-  </ul>
-  <div *ngIf='selectedUser; else infoBlock'>
-    <app-tasks [name]='selectedUser.name'
-               [userId]='selectedUser.id'
-    ></app-tasks>
-  </div>
-</main>
-
-<ng-template #infoBlock>
-  <h3>Select a user</h3>
-</ng-template>
-
+<router-outlet></router-outlet>
 
