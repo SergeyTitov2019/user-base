@@ -11,6 +11,8 @@ import { NewTaskComponent } from './tasks/task/new-task/new-task.component';
 import { FormsModule } from '@angular/forms';
 import { DerectivesTestComponent } from './derectives-test/derectives-test.component';
 import { UserLayoutComponent } from './user/user-layout/user-layout.component';
+import { AuthComponent } from './derectives-test/auth/auth.component';
+import { LearningResourcesComponent } from './derectives-test/learning-resources/learning-resources.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { UserLayoutComponent } from './user/user-layout/user-layout.component';
     NewTaskComponent,
     DerectivesTestComponent,
     UserLayoutComponent,
+    AuthComponent,
+    LearningResourcesComponent,
   ],
   imports: [
     BrowserModule,
