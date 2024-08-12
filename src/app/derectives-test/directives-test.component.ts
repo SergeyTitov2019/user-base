@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core'
+import { Component, computed, inject } from '@angular/core'
 import { AuthService } from './auth/auth.service'
 
 @Component({
@@ -8,5 +8,6 @@ import { AuthService } from './auth/auth.service'
 })
 export class DirectivesTestComponent {
   private authService = inject(AuthService)
+  isAdmin = computed(() => this.authService.activePermission() === 'admin')
 
 }

@@ -15,7 +15,6 @@ main {
   display: flex;
   gap: 0.5rem;
   overflow: auto;
-  /*width: 25rem;*/
 }
 
 #fallback {
@@ -40,3 +39,4 @@ main {
     text-align: left;
   }
 }
+

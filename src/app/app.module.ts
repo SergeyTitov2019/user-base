@@ -13,6 +13,8 @@ import { DirectivesTestComponent } from './derectives-test/directives-test.compo
 import { UserLayoutComponent } from './user/user-layout/user-layout.component';
 import { AuthComponent } from './derectives-test/auth/auth.component';
 import { LearningResourcesComponent } from './derectives-test/learning-resources/learning-resources.component';
+import { SaveLinkDirective } from './derectives-test/save-link.directive';
+import { AuthDirective } from './derectives-test/auth.directive';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { LearningResourcesComponent } from './derectives-test/learning-resources
     UserLayoutComponent,
     AuthComponent,
     LearningResourcesComponent,
+    SaveLinkDirective,
+    AuthDirective,
   ],
   imports: [
     BrowserModule,

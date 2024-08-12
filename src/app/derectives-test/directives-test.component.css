@@ -14,8 +14,8 @@ hr {
 
 .protected-content {
   background-color: #6a0931;
-  color: #161515;
   padding: 1.5rem;
+  color: white;
   border-radius: 4px;
 }
 
@@ -29,4 +29,10 @@ hr {
 
 .admin {
   background-color: #1354be;
+  background-color: #1354be;
+
+}
+
+p{
+  color: #3a096a;
 }
