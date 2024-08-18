@@ -11,7 +11,7 @@ export class SaveLinkDirective {
   private hostElementRef = inject<ElementRef<HTMLAnchorElement>>(ElementRef)
 
   constructor() {
-    console.log(this.hostElementRef.nativeElement)
+    // console.log(this.hostElementRef.nativeElement)
   }
 
   onConfirmLeavePage(event: MouseEvent) {

@@ -1,12 +1,14 @@
-<header>
+<header [class]="{
+'header-black': classView === 'todo',
+'header-red': classView === 'directives'
+}">
   <div class='btn-wrapper'>
-    <button routerLink='/user'>User Base</button>
-    <button routerLink='/directives'>Directives</button>
-    <button routerLink='/test'>Test</button>
+    <button routerLink='/user' (click)='onChangeView("user")'>User Base</button>
+    <button routerLink='/directives' (click)='onChangeView("directives")'>Directives</button>
+    <button routerLink='/todo' (click)='onChangeView("todo")'>ToDo Tasks</button>
   </div>
-  <img src='task-management-logo.png' alt='logo'>
   <div>
-    <h1>Easy TAsk</h1>
-    <p>Enterprise level</p>
+    <h1>Angular Task Sandbox</h1>
+    <p>{{ infoText }}</p>
   </div>
 </header>

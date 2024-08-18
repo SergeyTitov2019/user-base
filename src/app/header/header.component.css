@@ -3,15 +3,20 @@ header {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  width: 90%;
+  width: 100%;
   max-width: 50rem;
   margin: 0 auto 2rem auto;
   text-align: center;
   background: linear-gradient(to bottom, #2c0a4c, #450d80);
-  padding: 1rem;
+  /*padding: 0 1rem;*/
   border-bottom-right-radius: 12px;
   border-bottom-left-radius: 12px;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+}
+
+header.header-black {
+  background: linear-gradient(to bottom, #110b11, #1b0e29);
+
 }
 
 .btn-wrapper{
@@ -22,19 +27,19 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
+  /*gap: 0.1rem;*/
   padding: 0.35rem 0.5rem;
-  background-color: #433352;
-  color: #c3b3d1;
+  background-color: #b28cd9;
+  color: #230939;
   border: none;
   font: inherit;
   cursor: pointer;
-  width: 3rem;
-  min-width: 10rem;
+  /*width: 3rem;*/
+  min-width: 8rem;
   text-align: left;
-  border-radius: 6px;
+  border-radius: 4px;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
-  margin: 0 0.5rem;
+  margin: 0 0.2rem;
 }
 
 button:hover,
@@ -63,7 +68,7 @@ p {
 
 @media (min-width: 768px) {
   header {
-    padding: 2rem;
+    padding: 1rem 0 2rem 0;
   }
 
   img {
