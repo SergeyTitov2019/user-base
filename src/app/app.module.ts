@@ -15,6 +15,11 @@ import { AuthComponent } from './derectives-test/auth/auth.component';
 import { LearningResourcesComponent } from './derectives-test/learning-resources/learning-resources.component';
 import { SaveLinkDirective } from './derectives-test/save-link.directive';
 import { AuthDirective } from './derectives-test/auth.directive';
+import { LogDirective } from './derectives-test/log.directive';
+import { TodoTasksComponent } from './todo-tasks/todo-tasks.component';
+import { TodoTasksListComponent } from './todo-tasks/todo-tasks-list/todo-tasks-list.component';
+import { TodoTaskItemComponent } from './todo-tasks/todo-tasks-list/todo-task-item/todo-task-item.component';
+import { TodoNewTaskComponent } from './todo-tasks/todo-new-task/todo-new-task.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +35,11 @@ import { AuthDirective } from './derectives-test/auth.directive';
     LearningResourcesComponent,
     SaveLinkDirective,
     AuthDirective,
+    LogDirective,
+    TodoTasksComponent,
+    TodoTasksListComponent,
+    TodoTaskItemComponent,
+    TodoNewTaskComponent,
   ],
   imports: [
     BrowserModule,
